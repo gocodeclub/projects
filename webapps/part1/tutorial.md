@@ -9,13 +9,13 @@
 
 ###Webapps in Go: Part 1
 
-Welcome to the first edition of the first series at the Go Code Club!  The first topic were going to be covering here is an area that I am fortunte to have some good experience with, so I found it a good starting spot. And really, how could you have a club about Go and NOT talk about webapps ;)
+Welcome to the first edition of the first series at the Go Code Club!  The first topic were going to be covering here is an area that I am fortunate to have some good experience with, so I found it a good starting spot. And really, how could you have a club about Go and NOT talk about webapps ;)
 
 Ok, so let's say you want to create a webapp that foos bars.  So where do you start? So which framework do you choose?  There are some great options out there, and we will cover several in this series.  However, I want to stress that before you start slinging code with your favorite framework, you should fully understand how the Net/HTTP libraries work.  You might be happily surprised by how much heavy lifting it does all by itself.
 
 ###Hello net/http
 
-So let's start with a pretty simple example, using only net/http.  Out of the box, Go can do some pretty complecated things, like [handle http](http://golang.org/pkg/net/http/), [serve files](http://golang.org/pkg/net/http/#FileServer), [parse request bodies](http://golang.org/pkg/encoding/json/), and much more.  
+So let's start with a pretty simple example, using only net/http.  Out of the box, Go can do some pretty complicated things, like [handle http](http://golang.org/pkg/net/http/), [serve files](http://golang.org/pkg/net/http/#FileServer), [parse request bodys](http://golang.org/pkg/encoding/json/), and much more.  
 
 Here we have an example that listens on port 3000 and waits for requests.  
 
@@ -41,7 +41,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 Pretty basic stuff, but I wanted to point a few things out.  The `http.HandleFunc` method is a bit of shorthand that actually does a few things.  It takes a function that conforms to the [Handler](http://golang.org/pkg/net/http/#Handler) interface, which is basically a function that takes `(ResponseWriter, *Request)` as parameters.  
 
-It also uses the DefaultServerMux to multiplex the connection.  If you want to know more about how the Handler interface works, check out this [really detailed article](http://www.alexedwards.net/blog/a-recap-of-request-handling) on the subject.
+It also uses the DefaultServerMux to multiplex the connection.  If you want to know more about how the Handler interface works, check out this [really detailed articlee](http://www.alexedwards.net/blog/a-recap-of-request-handling) on the subject.
 
 ###Web Frameworks in Go
 
@@ -52,8 +52,8 @@ I think first, you need to ask yourself, what's the point of a web framework, or
    - **frameworks solve common problems** - for example, you want to provide CSFR support?  Or maybe you want to handle basic auth?  These are *very* common features of a web framework. 
 
 This all sounds pretty great, but there are a few reasons you might want to be careful in choosing a framework.  
-   - **Frameworks abstract details from you**:  This is both good and bad.  Today, you might not care about some low level language details, but tomorrow you might have a new feature that requrires greater control.  
-   - **Your needs are unique** - at some point, you will run into something that the framework doesnt handle very gracefully.  You're then going to have to ask yourself, "how to I solove X issue in Y framework" rather than "how do I solve X issue in Y language".
+   - **Frameworks abstract details from you**:  This is both good and bad.  Today, you might not care about some low level language details, but tomorrow you might have a new feature that requires greater control.  
+   - **Your needs are unique** - at some point, you will run into something that the framework doesn't handle very gracefully.  You're then going to have to ask yourself, "how to I solve X issue in Y framework" rather than "how do I solve X issue in Y language".
 
 So if you decide that you need some additional features, and that a framework could help you, you may want to check one of these out.  If not, Net/HTTP can take you a long way.
 
@@ -75,7 +75,7 @@ func main() {
 }
 ```
 
-Martini is a minimalistic web framework for quickly writing modular web applications/services in Go.  Whats unique about Martini is its method of dependecy injection to deal with common request issues.  
+Martini is a minimalistic web framework for quickly writing modular web applications/services in Go.  Whats unique about Martini is its method of dependency injection to deal with common request issues.  
 
 To get this hello world up and running, you need to first copy the code and place it in your GOPATH, lets call it server.go.  
 
