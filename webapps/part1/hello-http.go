@@ -9,7 +9,10 @@ func main() {
 	http.HandleFunc("/hello", hello)
 
 	log.Println("Listening...")
-	http.ListenAndServe(":3000", nil)
+	err := http.ListenAndServe(":3000", nil)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
