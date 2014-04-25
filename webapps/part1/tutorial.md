@@ -17,7 +17,7 @@ Ok, so let's say you want to create a webapp that *foos bars*.  So where do you 
 
 ###Hello net/http
 
-So let's start with a pretty simple example, using only net/http.  Out of the box, Go can do some pretty complicated things, like [handle http](http://golang.org/pkg/net/http/), [serve files](http://golang.org/pkg/net/http/#FileServer), [parse request bodys](http://golang.org/pkg/encoding/json/), and much more.  
+So let's start with a pretty simple example, using only net/http.  Out of the box, Go can do some pretty complicated things, like [handle http](http://golang.org/pkg/net/http/), [serve files](http://golang.org/pkg/net/http/#FileServer), [parse request bodies](http://golang.org/pkg/encoding/json/), and much more.  
 
 Here we have an example that listens on port 3000 and waits for requests.  
 
@@ -95,9 +95,9 @@ This week, I'm going easy on you.  I want to cater to all levels, some of whom m
 
 Run both of the hello world examples above (the standard net/http one, and the martini one).  Try playing around with adding routes, parameters, or even POSTing some params. 
 
-If your completely new to Go, read [my getting starting post](http://app.gocodeclub.com/t/gettings-started-with-go/12), get Go installed and setup, and then do this assignment.
+If your completely new to Go, read [my getting started post](http://app.gocodeclub.com/t/gettings-started-with-go/12), get Go installed and setup, and then do this assignment.
 
-For those of you who have already played around with Martini, great!  You're one step ahead.  Make sure you're up-to-date with the latest martini docs. Also make sure you're linking to the most recent version of Martini, as [its changed](https://groups.google.com/forum/#!topic/martini-go/hw8trVJXB2c). Next week's assignment will be fun for everyone at all levels.  
+For those of you who have already played around with Martini, great!  You're one step ahead.  Make sure you're up-to-date with the latest Martini docs. Also make sure you're linking to the most recent version of Martini, as [its changed](https://groups.google.com/forum/#!topic/martini-go/hw8trVJXB2c). Next week's assignment will be fun for everyone at all levels.  
 
 ###Next week!
 The next post will be covering a deeper dive into Martini to go through exactly how this all works.  Here's a sneak peek at what I have planned:
