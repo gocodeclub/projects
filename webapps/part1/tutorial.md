@@ -1,6 +1,6 @@
 #Golang webapps, pt 1
 
-###http handling 
+###Summary
 
 - Native Go HTTP
 - Web Frameworks in Go
@@ -11,7 +11,7 @@
 
 Welcome to the first edition of the first series at the Go Code Club!  The first topic were going to be covering here is an area that I am fortunate to have some good experience with, so I found it a good starting spot. And really, how could you have a club about Go and NOT talk about webapps ;)
 
-Ok, so let's say you want to create a webapp that foos bars.  So where do you start? So which framework do you choose?  There are some great options out there, and we will cover several in this series.  However, I want to stress that before you start slinging code with your favorite framework, you should fully understand how the Net/HTTP libraries work.  You might be happily surprised by how much heavy lifting it does all by itself.
+Ok, so let's say you want to create a webapp that *foos bars*.  So where do you start? So which framework do you choose?  There are some great options out there, and we will cover several in this series.  However, I want to stress that before you start slinging code with your favorite framework, you should fully understand how the Net/HTTP libraries work.  You might be happily surprised by how much heavy lifting it does all by itself.
 
 ###Hello net/http
 
@@ -41,7 +41,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 Pretty basic stuff, but I wanted to point a few things out.  The `http.HandleFunc` method is a bit of shorthand that actually does a few things.  It takes a function that conforms to the [Handler](http://golang.org/pkg/net/http/#Handler) interface, which is basically a function that takes `(ResponseWriter, *Request)` as parameters.  
 
-It also uses the DefaultServerMux to multiplex the connection.  If you want to know more about how the Handler interface works, check out this [really detailed articlee](http://www.alexedwards.net/blog/a-recap-of-request-handling) on the subject.
+It also uses the DefaultServerMux to multiplex the connection.  If you want to know more about how the Handler interface works, check out this [really detailed article](http://www.alexedwards.net/blog/a-recap-of-request-handling) on the subject.
 
 ###Web Frameworks in Go
 
