@@ -6,6 +6,8 @@
 - Web Frameworks in Go
 - Introduction to Martini
 
+**Note** *If you are completely new to go, start with [this](http://app.gocodeclub.com/t/gettings-started-with-go/12) tutorial on how to get go setup, and move on to this assignment*
+
 
 ###Webapps in Go: Part 1
 
@@ -45,7 +47,7 @@ It also uses the DefaultServerMux to multiplex the connection.  If you want to k
 
 ###Web Frameworks in Go
 
-There are a **ton** of great web frameworks right now for Go, to name a few: Revel, Martini, Beego, Gorilla, and many more.  I hope by the end of this series, you'll have a better idea of how to choose what framework is for you, and to understand the basic value propositions each give. 
+There are a **ton** of great web frameworks right now for Go, to name a few: [Revel](http://revel.github.io/), [Martini](http://martini.codegangsta.io/), [Beego](http://beego.me/), [Gorilla](http://www.gorillatoolkit.org/), and many more.  I hope by the end of this series, you'll have a better idea of how to choose what framework is for you, and to understand the basic value propositions each give. 
 
 I think first, you need to ask yourself, what's the point of a web framework, or a framework in general? 
    - **frameworks make you productive**.  Frameworks ideally keep you writing application logic, and not worrying about the semantics of a language.  Some larger frameworks even give you a way of organizing your code, and other niceties.
@@ -93,8 +95,7 @@ This week, I'm going easy on you.  I want to cater to all levels, some of whom m
 
 Run both of the hello world examples above (the standard net/http one, and the martini one).  Try playing around with adding routes, parameters, or even POSTing some params. 
 
-
-If your completely new to Go, go read <this post>, get Go installed and setup, and then do this assignment.
+If your completely new to Go, read [my getting starting post](http://app.gocodeclub.com/t/gettings-started-with-go/12), get Go installed and setup, and then do this assignment.
 
 For those of you who have already played around with Martini, great!  You're one step ahead.  Make sure you're up-to-date with the latest martini docs. Also make sure you're linking to the most recent version of Martini, as [its changed](https://groups.google.com/forum/#!topic/martini-go/hw8trVJXB2c). Next week's assignment will be fun for everyone at all levels.  
 
