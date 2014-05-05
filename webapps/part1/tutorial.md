@@ -11,13 +11,13 @@
 
 ###Webapps in Go: Part 1
 
-Welcome to the first edition of the first series at the Go Code Club!  The first topic were going to be covering here is an area that I am fortunate to have some good experience with, so I found it a good starting spot. And really, how could you have a club about Go and NOT talk about webapps ;)
+Welcome to the first edition of the first series at the Go Code Club!  The first topic we are going to be covering here is an area that I am fortunate to have some good experience with, so I found it a good starting spot. And really, how could you have a club about Go and NOT talk about webapps ;)
 
-Ok, so let's say you want to create a webapp that *foos bars*.  So where do you start? So which framework do you choose?  There are some great options out there, and we will cover several in this series.  However, I want to stress that before you start slinging code with your favorite framework, you should fully understand how the Net/HTTP libraries work.  You might be happily surprised by how much heavy lifting it does all by itself.
+Ok, let's say you want to create a webapp that *foos bars*.  Where do you start? Which framework do you choose?  There are some great options out there, and we will cover several in this series.  However, I want to stress that before you start slinging code with your favorite framework, you should fully understand how the Net/HTTP libraries work.  You might be happily surprised by how much heavy lifting it does all by itself.
 
 ###Hello net/http
 
-So let's start with a pretty simple example, using only net/http.  Out of the box, Go can do some pretty complicated things, like [handle http](http://golang.org/pkg/net/http/), [serve files](http://golang.org/pkg/net/http/#FileServer), [parse request bodies](http://golang.org/pkg/encoding/json/), and much more.  
+Let's start with a simple example, using only net/http.  Out of the box, Go can do some pretty complicated things, like [handle http](http://golang.org/pkg/net/http/), [serve files](http://golang.org/pkg/net/http/#FileServer), [parse request bodies](http://golang.org/pkg/encoding/json/), and much more.  
 
 Here we have an example that listens on port 3000 and waits for requests.  
 
@@ -53,11 +53,11 @@ I think first, you need to ask yourself, what's the point of a web framework, or
    - **frameworks make you productive**.  Frameworks ideally keep you writing application logic, and not worrying about the semantics of a language.  Some larger frameworks even give you a way of organizing your code, and other niceties.
    - **frameworks solve common problems** - for example, you want to provide CSFR support?  Or maybe you want to handle basic auth?  These are *very* common features of a web framework. 
 
-This all sounds pretty great, but there are a few reasons you might want to be careful in choosing a framework.  
+This all sounds great, but there are a few reasons you might want to be careful in choosing a framework.  
    - **Frameworks abstract details from you**:  This is both good and bad.  Today, you might not care about some low level language details, but tomorrow you might have a new feature that requires greater control.  
    - **Your needs are unique** - at some point, you will run into something that the framework doesn't handle very gracefully.  You're then going to have to ask yourself, "how to I solve X issue in Y framework" rather than "how do I solve X issue in Y language".
 
-So if you decide that you need some additional features, and that a framework could help you, you may want to check one of these out.  If not, Net/HTTP can take you a long way.
+If you decide that you need some additional features, and that a framework could help you, you may want to check one of these out.  If not, Net/HTTP can take you a long way.
 
 Some frameworks are very minimalistic, like Gorilla, and Martini, while others are more full feature, like Revel.  We will cover more of the pros and cons to each as we go, but first, I want to dive into a very popular framework right now called Martini.
 
