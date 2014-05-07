@@ -31,7 +31,7 @@ At the core of understanding everything that's going on in Martini, is two conce
 
 Let's say you want to display the home page on your website.  Basically, when the user is directed to `/home`, we want to take a certain *action*.  This *action* is essentially our handler, and `/home` is our route.
 
-```go
+```javascript
 m.Get("/home", func() string {
   return "Welcome Home!" // HTTP 200 : "Welcome Home!"
 })
@@ -43,7 +43,7 @@ Pretty simple, right?  Okay, lets take things one step further.  Handlers can ac
 
 One thing to note is that only one handler can write a response (actually physically return something to the page).  Usually, that's your last handler, but not always.  Let's take another contrived example:
 
-```go
+```javascript
 m.Get("/home", authorize, func() {
   // this will execute as long as authorize doesn't write a response
   return "Welcome Home!" // HTTP 200 : "Welcome Home!"
@@ -55,7 +55,7 @@ This is almost identical to the first example, except this example takes one add
 ####Side Note
 ...But wait, how many parameters does this martini.Get() function take?  First we passed in one handler, now we're passing in two.  What gives?  This is a cool feature about Go, called [Variadic Functions](http://www.golang-book.com/7#section3).  If you pop open router.go in the martini package, you'll see the Router interface:
 
-```go
+```javascript
 type Router interface {
 	...
 	// Get adds a route for a HTTP GET request to the specified matching pattern.
@@ -77,7 +77,7 @@ In short, you can map parameters to your martini instance, making them optionall
 
 By default, a classic Martini has a few services mapped for you, like http.ResponseWriter, http.Request and martini.Context, so you can feel free to include them as params when needed.  It's easy, however, to map your own services.  Let's write the authorize function we referenced above:
 
-```go
+```javascript
 type User struct {
 	Username string
 }
@@ -99,7 +99,7 @@ func authorize(w http.ResponseWriter, r *http.Request, session sessions.Session,
 
 In this example, we're going to pull in the sessions package from Martini contrib.  This is a vastly oversimplified approach, but we will improve it next week.  For now, we are going to simply check to see if there is a value in the username session.  If we find it, we're going to create a new instance of a user, and assign the username.  We then map the user object, which is going to make it available for us later.  
 
-```go
+```javascript
 m.Get("/home", authorize, func(user *User) string {
 	return "Welcome back, " + user.Username
 })
@@ -111,7 +111,7 @@ I've added a `*User` param to our handler for `/home`.  I can safely do this bec
 
 I've added two more routes to handle adding the session and deleting it, so you can test it out in your browser.  
 
-```go
+```javascript
 //on login, we will set the users username in the session
 m.Post("/login", func(w http.ResponseWriter, r *http.Request, session sessions.Session) string {
 	username := r.FormValue("username")
@@ -140,7 +140,8 @@ This week, we learned how to write your own handlers, and how to map services.  
 
 - Send a PR with your implementation.  Take a look [here](https://github.com/gocodeclub/projects/blob/master/README.md) for instructions on how to format your contribution.
 
+- Leave a comment here, if you'd like, explaining what you've written, and a link to your folder in the repo.
 
 As always, if I missed something or made a mistake, feel free to send me a PR
-https://github.com/gocodeclub/projects
+https://github.com/gocodeclub/projects/tree/master/webapps/part2
 
